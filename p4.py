@@ -22,10 +22,11 @@ for word in keywords:
 print("Original Prompt:", original_prompt)
 print("Enriched Prompt:", expanded_prompt)
 
-openai_api_key = "your-api-key-here"
-openai.api_key = openai_api_key
+openai.api_key = ""
 
-client = openai.OpenAI(api_key=openai_api_key)
+import openai
+
+client = openai.OpenAI(api_key=" ")
 
 response_enriched = client.chat.completions.create(
     model="gpt-4o-mini",
